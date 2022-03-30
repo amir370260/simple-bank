@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Page</title>
+
+    <!-- tailwind css -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="text-5xl text-center font-semibold mt-16">Account Information & Transaction</h1>
+    </header>
+
+    <main class="w-3/4 mx-auto">
+        <section class="mt-16">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-blue-400 p-8 rounded shadow text-white">
+                    <h3 class="text-3xl">Balance</h3>
+                    <h4 class="text-2xl">$ <span id="balance-total">100</span></h4>
+                </div>
+                <div class="bg-red-400 p-8 rounded shadow text-white">
+                    <h3 class="text-3xl">Witdraw</h3>
+                    <h4 class="text-2xl">$ <span id="witdraw-total">00</span></h4>
+                </div>
+                <div class="bg-green-400 p-8 rounded shadow text-white">
+                    <h3 class="text-3xl">Deposite</h3>
+                    <h4 class="text-2xl">$<span id="deposite-total">00</span></h4>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- deposite and witdraw -->
+        <section class="mt-16">
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-purple-400 p-8 rounded shadow-md">
+                    <h3 class="text-2xl font-semibold text-white">Deposite</h3>
+                    <input type="number" id="deposite-input" placeholder="Deposite Ammount $"
+                        class="block w-full my-4 p-2 rounded shadow-md">
+                    <button class="bg-green-600 px-4 py-2 rounded text-white font-semibold mx-auto shadow-2xl"
+                        id="deposite-button">Deposite</button>
+                </div>
+
+                <div class="bg-yellow-400 p-8 rounded shadow-md">
+                    <h3 class="text-2xl font-semibold text-white">Witdraw </h3>
+                    <input type="number" id="witdraw-input" placeholder="Witdraw Ammount $"
+                        class="block w-full my-4 p-2 rounded shadow-md">
+                    <button class="bg-red-500 px-4 py-2 rounded text-white font-semibold mx-auto shadow-2xl"
+                        id="witdraw-button">Witdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+  <!-- js -->
+    <script src="./bank.js"></script>
+</body>
+
+</html>
